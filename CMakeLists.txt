@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.13)
+project("yunul" VERSION 0.0.1)
+enable_testing()
+add_subdirectory("src")
+add_subdirectory("test")

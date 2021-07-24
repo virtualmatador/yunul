@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.13)
+file(GLOB sources "*.cpp")
+foreach(source ${sources})
+    get_filename_component(base "${source}" NAME_WE)
+    add_executable("${base}" "${source}")
+    add_test("${CMAKE_PROJECT_NAME}-${base}" "${base}")
+endforeach()
